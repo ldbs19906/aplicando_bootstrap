@@ -10,67 +10,16 @@ body{
     background-size: cover;
     background-repeat:no-repeat;
     background-position: center center;
+
     font-family: 'Roboto', sans-serif;
     font-weight: 800;/*negrita*/
-    display:grid;  
 
 }
 
 /*HEADER*/
 
-header{
-    
-    background: #4e94ab;
-}
-
-#btn-menu{
-    display: none; /*desaparece el boton de la maquetacion*/
-}
-
-header label{
-    display: none;
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    border-right:1px solid #fff ;
-    
-}
-
-header label:hover{
-    cursor: pointer;
-    background: rgba(0,0,0,0.3);
-}
-
-.menu ul{
-    margin: 0;
-    list-style:none ;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-
-    /*Para que este alineado a la derecha*/
-    justify-content: flex-end;
-    
-}
-
-.menu li{
-
-   border-right:1px solid #fff ;
 
 
-}
-
-.menu li:hover{
-    background: rgba(0,0,0,0.3);
-}
-
-.menu li a{
-    display: block;
-    padding: 15px 20px;
-    color: #fff;
-    text-decoration: none;
-
-}
 
 /*Fin header*/
 
@@ -105,7 +54,7 @@ header label:hover{
 
 .container .header{
 
-    grid-column: 1/6 ; /*Para que el header  abarquen las 6 columnas*/
+    grid-column: 1/6 ; 
     
     background-image: url(./img/65793-pizza.jpg);
     background-color: brown;
@@ -116,7 +65,7 @@ header label:hover{
 
     color:rgb(15, 61, 25);
     font-size: 30px;
-    padding:2rem;
+    padding:2rem; 
 }
 .container .footer{
     grid-column: 1/6 ; /*Para que el header y footer abarquen las 6 columnas*/
@@ -179,8 +128,24 @@ header label:hover{
     cursor: pointer;
     color: #000000;
     background: #ffffff;
+}
+/*footer*/
+.footer__flex{
+    display: flex;
+    justify-content: space-around;
+}
 
-    
+.footer__menu{
+
+    list-style: none;
+    text-align: center;
+}
+
+.footer__menu a{
+
+    color:white;
+    text-decoration: none;
+
 }
 
 /*Fomrmulario*/
@@ -234,66 +199,13 @@ textarea{
     
 }
 
-@media(max-width:480){
-    form{
-        width: 100%;
-    }
-}
-/*fin formulario*/
-/*--------------footer---------------------*/
-.footer__flex{
-    display: flex;
-    justify-content: space-around;
-}
 
-.footer__menu{
-
-    list-style: none;
-    text-align: center;
-}
-
-.footer__menu a{
-
-    color:white;
-    text-decoration: none;
-
-}
 
 /*Para celular*/
 
 @media(max-width:768px ){
 
-    header label{
-        display: block;
-        
-    }
-
-    .menu{
-        position: absolute;
-        background: #4e94ab;
-        width: 70%;
-        margin-left: -70%;
-        transition: all 0.5s;
-       
-    }
-
-    .menu ul{
-        flex-direction: column;
-        
-
-    }
-    .menu li{
-        border-top: 1px solid #fff ;
-        
-    }
-
-    #btn-menu:checked ~ .menu {
-        margin:0;
-                
-
-    }
-
-    .container .header{
+    .header{
         text-align: center;
     }
 
@@ -311,8 +223,10 @@ textarea{
 
         grid-column: 1/-1; 
     }
+    /*Para formulario*/
+
 
     form{
-        width: 100%;
+        width: 120%;
     }
 }
